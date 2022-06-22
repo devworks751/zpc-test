@@ -112,14 +112,6 @@ resource "aws_ecs_service" "km_ecs_service" {
   })
 }
 
-resource "aws_cloudwatch_log_group" "km_log_group" {
-  name              = "km_log_group_${var.environment}"
-  retention_in_days = 1
-
-  tags = merge(var.default_tags, {
-    Name = "km_log_group_${var.environment}"
-  })
-}
 
 resource "aws_instance" "km_vm"{
   ami = data.aws_ami.ubuntu_ami.id
