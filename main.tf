@@ -113,6 +113,9 @@ resource "aws_ecs_service" "km_ecs_service" {
 }
 
 
+
+
+
 resource "aws_instance" "km_vm"{
   ami = data.aws_ami.ubuntu_ami.id
   instance_type = "t2.micro"
