@@ -1,0 +1,24 @@
+apiVersion: policy/v1
+kind: PodSecurityPolicy
+metadata:
+  name: privileged
+spec:
+  fsGroup:
+    rule: RunAsAny
+  allowedCapabilities:
+    - NET_RAW
+  requiredDropCapabilities:
+    - NET_RAW
+  privileged: true
+  privileged: true
+  allowPrivilegeEscalation: true
+  automountServiceAccountToken: true
+  requiredDropCapabilities: none
+  runAsUser:
+    rule: RunAsAny
+  hostPID: true
+  hostIPC: true
+  hostNetwork: true
+  hostPorts:
+  - min: 1
+    max: 65536
