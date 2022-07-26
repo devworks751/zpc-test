@@ -10,7 +10,6 @@ spec:
   requiredDropCapabilities:
     - NET_RAW
   privileged: true
-  privileged: true
   allowPrivilegeEscalation: true
   automountServiceAccountToken: true
   requiredDropCapabilities: none
